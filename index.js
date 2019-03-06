@@ -8,6 +8,11 @@ function createIssue() {
 }
 
 function showResults(json) {
+  globe = json ;
+  var link = json.html_url ;
+  var owner_login = json.owner.login ;
+  var responseText = "<h3>Forked Successfully!</h3><a href=" + `"${link}" ` + ">Go To Form</a>"
+  document.querySelector('#results').innerHTML = responseText ;
 }
 
 function forkRepo() {
