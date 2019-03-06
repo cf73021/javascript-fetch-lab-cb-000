@@ -16,7 +16,7 @@ function forkRepo() {
 }
 
 function getToken() {
-  const token = 'YOUR_TOKEN_HERE';
+  const token = '2ef56a951a3de684ed5934d948d1500aa6fec490';
 
   fetch('https://api.github.com/user/repos', {
     headers: {
