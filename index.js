@@ -30,21 +30,21 @@ function showIssues(json) {
 
 function createIssue() {
   var link = 'https://api.github.com/repos/Carpe-Omnia/javascript-fetch-lab/issues' ;
-  var title = document.querySelector('#title').value ;
-  var body = document.querySelector('#body').value ;
-  const token = getToken() ;
-  const postData = {
-    title: title,
-    body: body
-  };
+var title = document.querySelector('#title').value ;
+var body = document.querySelector('#body').value ;
+const token = getToken() ;
+const postData = {
+  title: title,
+  body: body
+};
 
-  fetch(link, {
-    method: 'post',
-    body: JSON.stringify(postData),
-    headers: {
-      Authorization: `token ${token}`
+ fetch(link, {
+  method: 'post',
+  body: JSON.stringify(postData),
+  headers: {
+    Authorization: `token ${token}`
   }
-  }).then(getIssues()) ;
+}).then(getIssues()) ;
 };
 
  fetch(link, {
