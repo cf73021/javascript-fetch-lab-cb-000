@@ -12,6 +12,14 @@ function createIssue() {
   const postData = {
     title: title,
     body: body
+
+   fetch(link, {
+    method: 'post',
+    body: JSON.stringify(postData),
+    headers: {
+      Authorization: `token ${token}`
+    }
+  }).then(getIssues()) ;
 };
 
  fetch(link, {
