@@ -45,15 +45,6 @@ function createIssue() {
       Authorization: `token ${token}`
     }
   }).then(getIssues()) ;
-  };
-
-   fetch(link, {
-    method: 'post',
-    body: JSON.stringify(postData),
-    headers: {
-      Authorization: `token ${token}`
-    }
-  }).then(getIssues()) ;
 }
 
 function showResults(json) {
