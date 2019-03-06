@@ -5,6 +5,22 @@ function showIssues(json) {
 }
 
 function createIssue() {
+  var link = 'https://api.github.com/repos/Carpe-Omnia/javascript-fetch-lab/issues' ;
+  var title = document.querySelector('#title').value ;
+  var body = document.querySelector('#body').value ;
+  const token = getToken() ;
+  const postData = {
+    title: title,
+    body: body
+};
+
+ fetch(link, {
+  method: 'post',
+  body: JSON.stringify(postData),
+  headers: {
+    Authorization: `token ${token}`
+  }
+}).then(getIssues()) ;
 }
 
 function showResults(json) {
