@@ -15,17 +15,17 @@ function getIssues() {
 
 function showIssues(json) {
   globe = json ;
-var issueText = "<ul> " ;
-json.forEach(function(element) {
-  issueText += "<li>Title: <a href="  ;
-  issueText +=  `"${element.html_url}" > ${element.title} </a>` ;
-  issueText += `<span> | Body: ${element.body} </span> </li>` ;
-})
-  issueText += "</ul>" ;
-  console.log(issueText) ;
-  globe2 = issueText ;
-  var ish = document.querySelector('#issues') ;
-  setTimeout(function(){ish.innerHTML = globe2 ; console.log("set")}, 3000) ;
+  var issueText = "<ul> " ;
+  json.forEach(function(element) {
+    issueText += "<li>Title: <a href="  ;
+    issueText +=  `"${element.html_url}" > ${element.title} </a>` ;
+    issueText += `<span> | Body: ${element.body} </span> </li>` ;
+  })
+    issueText += "</ul>" ;
+    console.log(issueText) ;
+    globe2 = issueText ;
+    var ish = document.querySelector('#issues') ;
+    setTimeout(function(){ish.innerHTML = globe2 ; console.log("set")}, 3000) ;
 }
 
 function createIssue() {
