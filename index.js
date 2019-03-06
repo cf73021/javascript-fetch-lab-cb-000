@@ -1,4 +1,16 @@
+var globe ;
+var globe2 ;
+
 function getIssues() {
+  var link = 'https://api.github.com/repos/Carpe-Omnia/javascript-fetch-lab/issues' ;
+const token = getToken() ;
+fetch(link, {
+  method: 'get',
+  headers: {
+    Authorization: `token ${token}`
+  }
+}).then(res => res.json())
+  .then(json => showIssues(json))
 }
 
 function showIssues(json) {
